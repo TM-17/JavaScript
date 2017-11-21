@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+</head>
+<body>
+
+<script language="JavaScript">
+		
+var i=0
+
+function geta () {
+	a = document.getElementById("input1").value
+	return a
+}
+
+function entreea (a) {
+	inputVariable1 = document.createElement("input")
+	inputVariable1.setAttribute("id","input1")
+	inputVariable1.setAttribute("onchange","geta()")
+	document.body.appendChild(inputVariable1)
+	console.log(i)
+	return a
+	
+}
+
+function getb () {
+	b = document.getElementById("input2").value
+	return b
+}
+
+function entreeb (b) {
+	inputVariable2 = document.createElement("input")
+	inputVariable2.setAttribute("id","input2")
+	inputVariable2.setAttribute("onchange","getb()")
+	document.body.appendChild(inputVariable2)
+	console.log(i)
+	return b 
+}
+		
+function calcul(a,b){
+	for(var i=0;i<10;i++){
+		r = a*i+b
+	}
+	return r	
+}
+			
+function sortie (r) {
+	paragraphe = document.createElement("p")
+	document.body.appendChild(paragraphe)
+	texte = document.createTextNode(r)
+	paragraphe.appendChild(texte)
+	return r
+}
+		
+
+entreea ()
+entreeb ()
+calcul ()
+sortie (r)
+
+</script>
+</body>
+</html>
