@@ -1,0 +1,59 @@
+<HTML>
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+
+<script language="JavaScript">
+inputVariable = document.createElement("input")
+inputVariable.setAttribute("id","input1")
+inputVariable.setAttribute("onchange","executeFonction()")
+document.body.appendChild(inputVariable)
+document.getElementById("input1").value="a"
+
+inputVariable2 = document.createElement("input")
+inputVariable2.setAttribute("id","input2")
+inputVariable2.setAttribute("onchange","executeFonction()")
+document.body.appendChild(inputVariable2)
+document.getElementById("input2").value="b"
+
+function entreA(){
+a = document.getElementById("input1").value
+a = a*1
+return a 
+}
+
+function entreB() {
+b = document.getElementById("input2").value
+b=b*1
+return b
+}
+
+
+function metier(a,b) {
+	f = (6.67*10**(-11))*((10000*10000)/(a**2))
+	console.log(f)
+	return f
+}
+
+function affiche(f,a){
+	paragraphe = document.createElement("p")
+	document.body.appendChild(paragraphe)
+	texte = document.createTextNode("F("+a+")="+f+" N")
+	paragraphe.appendChild(texte)
+	
+}
+function executeFonction(){
+	a = entreA()
+	b = entreB()
+	while(a<b){
+		f = metier(a,b)
+		affiche(f,a)
+		a=a*2
+	}
+}
+
+</script>
+</body>
+</html>
