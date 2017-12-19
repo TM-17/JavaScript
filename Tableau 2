@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+</head>
+
+<body>
+<script language="JavaScript">
+
+alert("Bonjour");
+var demande = prompt ("Ecrivez votre phrase","ici");
+
+var tableau=[demande]
+var str=""
+var mot = demande.split(" ")
+
+for(var i=0;i<mot.length;i++){
+	var taille=mot[i].length
+	str+="Le mot le plus long est "+mot[i]+": "+taille+" caracteres"
+}
+
+paragraphe=document.createElement("p")
+document.body.appendChild(paragraphe)
+texte=document.createTextNode(str)
+paragraphe.appendChild(texte)
+</script>
+</body>
+</html>
